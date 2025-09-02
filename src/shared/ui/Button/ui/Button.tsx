@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', classNam
 
   return (
     <button
-      className={clsx(variants[variant], className, 'rounded-[8.53px] py-[18px]')}
+      className={clsx(variants[variant], className, 'rounded-[8.53px] py-[11px] cursor-pointer')}
       {...props} // передаём type, onClick, disabled и т.д.
     >
       {children}
