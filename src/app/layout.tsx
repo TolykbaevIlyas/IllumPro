@@ -1,21 +1,19 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Montserrat } from 'next/font/google';
+import './globals.css';
 
-import Header from "@/widgets/Header";
+import Header from '@/widgets/Header';
+import Footer from '@/widgets/Footer';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// Подключаем Montserrat
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  weight: ['400', '500', '600', '700'], // можно выбрать нужные веса
 });
 
 export const metadata: Metadata = {
-  title: "Illum Pro",
+  title: 'Illum Pro',
 };
 
 export default function RootLayout({
@@ -25,11 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${montserrat.variable} font-sans antialiased`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
