@@ -1,3 +1,4 @@
+import Directions from '@/widgets/Directions';
 import HeroMain from '@/widgets/HeroMain';
 import HeroMainMobile from '@/widgets/HeroMain/ui/HeroMainMobile';
 import InfoComp from '@/widgets/InfoComp';
@@ -12,6 +13,7 @@ export default function Home() {
         <HeroMainMobile />
       </div>
       <InfoComp />
+      <Directions />
     </main>
   );
 }
