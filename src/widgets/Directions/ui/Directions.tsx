@@ -7,6 +7,7 @@ import img1923 from '@/shared/assets/1923.jpg';
 import img1924 from '@/shared/assets/1924.jpg';
 import img1925 from '@/shared/assets/1925.jpg';
 import img1926 from '@/shared/assets/1926.jpg';
+import Button from '@/shared/ui/Button';
 
 const cards = [
   {
@@ -47,6 +48,12 @@ const Directions = () => {
           <DirectionsCard key={index} title={card.title} img={card.img} />
         ))}
       </div>
+      <Button
+        variant="primary"
+        className="max-[391]:mx-auto block max-[391]:float-none float-right mt-[42px] text-[18px] font-semibold max-w-[240px] w-full"
+      >
+        Показать больше
+      </Button>
     </div>
   );
 };
