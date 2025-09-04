@@ -11,7 +11,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="text-[#2E2C30] max-w-[1400px] mx-auto p-4">
+    <header className="text-[#2E2C30] max-w-[1400px] mx-auto p-4 z-20">
       {/* MOBILE HEADER */}
       <div className="flex items-center justify-between md:hidden">
         <button onClick={() => setMenuOpen(!menuOpen)}>
