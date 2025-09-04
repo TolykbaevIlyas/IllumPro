@@ -14,18 +14,19 @@ const page = () => {
     ];
 
     const catalog = [
-        { id: 1, name: "Архитектурное освещение", multiline: true, img: "/svg/catalog/ikonka_as 2.svg", bg: "" },
-        { id: 2, name: "Ландшафтное освещение",multiline: true, img: "/svg/catalog/icon-wa 4.svg", bg: "" },
-        { id: 3, name: "Дорожное освещение",multiline: true, img: "/svg/catalog/speedway_60-2.svg", bg: "" },
-        { id: 4, name: "Интерьерное освещение",multiline: true, img: "/svg/catalog/morrigan_ik.svg", bg: "" },
-        { id: 5, name: "Светильники для музеев",multiline: true, img: "/svg/catalog/ikonka.svg", bg: "" },
-        { id: 6, name: "Болларды", img: "/svg/catalog/zigzag_600-1.svg", bg: "" },
-        { id: 7, name: "Художественное литьё",multiline: true, img: "/svg/catalog/vivaldi_ikonka.svg", bg: "" },
-        { id: 8, name: "Световые фасады",multiline: true, img: "/svg/catalog/dom-tip-1-1.svg", bg: "" },
-        { id: 9, name: "Поля света",multiline: true, img: "/svg/catalog/svetilnik-svetodiodnyj-shar.png.svg", bg: "" },
-        { id: 10, name: "Опоры освещения",multiline: true, img: "/svg/catalog/modulnyj-stolb.svg", bg: "" },
-        { id: 11, name: "Модульное оборудование",desk: "Автоматы, УЗО, контакторы и защита", multiline: true, img: "", bg: "#ef3824;" },
-        { id: 12, name: "Аксессуары", img: "/svg/catalog/2-plates-512x512-1.svg", bg: "" },
+        { id: 1, name: "Tornado", multiline: true, img: "/svg/catalog/image 184.png", bg: "" },
+        { id: 2, name: "Archspot",multiline: true, img: "/svg/catalog/image 185.png", bg: "" },
+        { id: 3, name: "Mesh",multiline: true, img: "/svg/catalog/image 196.png", bg: "" },
+        { id: 4, name: "Pin",multiline: true, img: "/svg/catalog/image 197.png", bg: "" },
+        { id: 5, name: "Bruce",multiline: true, img: "/svg/catalog/image 186.png", bg: "" },
+        { id: 6, name: "Sofia", img: "/svg/catalog/image 198.png", bg: "" },
+        { id: 7, name: "Proline Premium",multiline: true, img: "/svg/catalog/image 199.png", bg: "" },
+        { id: 8, name: "TD",multiline: true, img: "/svg/catalog/image 200.png", bg: "" },
+        { id: 9, name: "Stem",multiline: true, img: "/svg/catalog/image 201.png", bg: "" },
+        { id: 10, name: "TC",multiline: true, img: "/svg/catalog/image 202.png", bg: "" },
+        { id: 11, name: "Flex IP68",desk: "Автоматы, УЗО, контакторы и защита", multiline: true, img: "/svg/catalog/image 204.png", bg: "#ef3824;" },
+        { id: 12, name: "Underwater", img: "/svg/catalog/image 205.png", bg: "" },
+        { id: 13, name: "Archline", img: "/svg/catalog/image 206.png", bg: "" },
     ];
 
     const Quality = [
@@ -52,38 +53,23 @@ const page = () => {
                 <p>TORNADO</p>
             </div>
             <div className='flex justify-between'>
-                <h3 className='text-[42px] leading-[100%] font-[700] uppercase mt-[40px]'>Каталог</h3>
+                <h3 className='text-[42px] leading-[100%] font-[700] uppercase mt-[40px]'>Архитектурное освещение</h3>
                 <div className='flex gap-[17px]'>
                     Скачать каталог (PDF)
                     <img src="/svg/catalog/donwload.svg" alt=""  className='max-w-[17px] w-full h-[21px]'/>
                 </div>
             </div>
+            <p className='mt-[47px] max-w-[890px] w-full'>Мы разрабатывает решения для архитектурной подсветки фасадов, ниш, колонн и кровель. Мы поставляем надёжные светильники с разной оптикой, цветовой температурой
+и DALI-управлением. Работаем с современными и историческими объектами.</p>
             <div className='flex gap-[20px] mt-[57px]'>
-                <div className='grid grid-cols-3 gap-[20px] max-w-[858px] w-full rounded-[9px]'>
+                <div className='grid grid-cols-5 max-lg:grid-cols-3 gap-[25px] max-w-[1349px] w-full rounded-[9px]'>
                     {catalog.map((item)=> (
-                    <Link href={'/CatalogInner'} key={item.id} className='relative *:max-w-[273px] h-[201] w-full bg-[#F8F8F8] p-[14px]'>
-                        <p className='text-[16px] font-[600] leading-[120%]'>{item.name}</p>
-                        <Image width={0} height={0} sizes="100vw" src={item.img} alt=""  className='w-auto h-auto absolute right-0 bottom-0 max-lg:scale-50 max-lg:origin-bottom-right'/>
-                    </Link>
-                ))}
+                        <Link href="/CatalogSeries" key={item.id} className='relative *:max-w-[273px] h-[201] w-full bg-[#F8F8F8] p-[14px]'>
+                            <p className='text-[16px] font-[600] leading-[120%]'>{item.name}</p>
+                            <Image width={0} height={0} sizes="300vw" src={item.img} alt=""  className='w-auto h-auto absolute right-0 bottom-0 max-lg:scale-50 max-lg:origin-bottom-right'/>
+                    </Link>))}
                 </div>
-                <div className=' max-lg:hidden max-w-[476px] w-full border border-[#EF3824] py-[39px] px-[36px] rounded-[9px]'>
-                    <h4 className='text-[42px] uppercase leading-[120%] font-[700]'>Модульное <br/>оборудование</h4>
-                    <p className='mt-[41px] text-[18px] leading-[120%] font-[400]'>
-                        Надёжные компоненты <span className='text-[#EF3824]'>для щитовых <br/>
-                        систем и электробезопасности.<br/></span> 
-                        Подходят для промышленных<br/>
-                        и городских объектов<br/>
-                    </p>
-                    <div className='mt-[129px] flex flex-col gap-[10px] mb-[207px]'>
-                        {modules.map((item) => (
-                            <div key={item.id} className='flex gap-[20px]'>
-                                <img src={item.img} alt="" />
-                                <p>{item.name}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+            
             </div>
         </div>
         <div className='mt-[110px]'>
