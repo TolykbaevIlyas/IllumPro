@@ -52,7 +52,7 @@ const page = () => {
                 </svg>
                 <p>TORNADO</p>
             </div>
-            <div className='flex justify-between'>
+            <div className='flex justify-between max-lg:flex-col'>
                 <h3 className='text-[42px] leading-[100%] font-[700] uppercase mt-[40px]'>Архитектурное освещение</h3>
                 <div className='flex gap-[17px]'>
                     Скачать каталог (PDF)
@@ -66,7 +66,7 @@ const page = () => {
                     {catalog.map((item)=> (
                         <Link href="/CatalogSeries" key={item.id} className='relative *:max-w-[273px] h-[201] w-full bg-[#F8F8F8] p-[14px]'>
                             <p className='text-[16px] font-[600] leading-[120%]'>{item.name}</p>
-                            <Image width={0} height={0} sizes="300vw" src={item.img} alt=""  className='w-auto h-auto absolute right-0 bottom-0 max-lg:scale-50 max-lg:origin-bottom-right'/>
+                            <Image width={0} height={0} sizes="300vw" src={item.img} alt=""  className='w-auto h-auto absolute right-0 bottom-0 max-lg:scale-200 max-lg:origin-bottom-right'/>
                     </Link>))}
                 </div>
             

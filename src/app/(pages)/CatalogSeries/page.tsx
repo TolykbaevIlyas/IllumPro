@@ -53,7 +53,7 @@ const page = () => {
                 </svg>
                 <p>TORNADO</p>
             </div>
-            <div className='flex justify-between'>
+            <div className='flex justify-between max-lg:flex-col'>
                 <h3 className='text-[42px] leading-[100%] font-[700] uppercase mt-[40px]'>КАТАЛОГ СЕРИИ TORNADO</h3>
                 <div className='flex gap-[17px]'>
                     Скачать каталог (PDF)
