@@ -4,6 +4,7 @@ import HeroMainMobile from '@/widgets/HeroMain/ui/HeroMainMobile';
 import InfoComp from '@/widgets/InfoComp';
 import News from '@/widgets/News';
 import OurProduction from '@/widgets/OurProduction';
+import SliderMain from '@/widgets/SliderMain';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <HeroMainMobile />
       </div>
       <InfoComp />
+      <SliderMain />
       <Directions />
       <OurProduction />
       <div className="bg-[url('@/shared/assets/news.png')] bg-cover bg-center  max-w-dvw w-full max-h-dvh max-[1280px]:h-[525px] max-[1920px]:h-[576px] min-[1920px]:h-[671px]">

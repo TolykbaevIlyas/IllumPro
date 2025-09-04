@@ -4,3 +4,26 @@ body {
   background: white;
   font-family: Montserrat, sans-serif;
 }
+
+.swiper-pagination {
+  position: absolute !important;
+  bottom: -42px !important; /* сдвигаем на 42px ниже */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1 !important;
+  background: #c4c4c4 !important;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background: #2e2c30;
+}
