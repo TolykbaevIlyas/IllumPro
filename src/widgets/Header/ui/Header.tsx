@@ -57,9 +57,12 @@ const Header = () => {
           <div className="flex gap-[30px] items-center w-full">
             <Logo />
             <div className="flex gap-[14px] items-center w-full">
-              <Button variant="primary" className="text-[15px] max-w-[130px] w-full">
-                Каталог
-              </Button>
+              <Link className='max-w-[130px] w-full' href={"/Catalog"}>
+                <Button variant="primary" className="text-[15px] max-w-[130px] w-full">
+                  Каталог
+                </Button>
+              </Link>
+             
               <Input variant="search" className="max-w-[420px] w-full" />
             </div>
           </div>

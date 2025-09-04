@@ -1,0 +1,64 @@
+'use client'
+
+import React from 'react'
+
+const page = () => {
+
+    const modules = [
+        {id: 1, name: 'Автоматические выключатели', img: '/svg/catalog/avtomat.svg'},
+        {id: 2, name: 'Контакторы', img: '/svg/catalog/kontaktor.svg'},
+        {id: 3, name: 'Ограничители пускового тока', img: '/svg/catalog/opt.svg'},
+        {id: 4, name: 'Устройства защитного отключения (УЗО)', img: '/svg/catalog/uzo.svg'},
+    ];
+
+    const catalog = [
+        { id: 1, name: "Архитектурное освещение", multiline: true, img: "/svg/catalog/ikonka_as 2.svg", bg: "" },
+        { id: 2, name: "Ландшафтное освещение",multiline: true, img: "/svg/catalog/icon-wa 4.svg", bg: "" },
+        { id: 3, name: "Дорожное освещение",multiline: true, img: "/svg/catalog/speedway_60-2.svg", bg: "" },
+        { id: 4, name: "Интерьерное освещение",multiline: true, img: "/svg/catalog/morrigan_ik.svg", bg: "" },
+        { id: 5, name: "Светильники для музеев",multiline: true, img: "/svg/catalog/ikonka.svg", bg: "" },
+        { id: 6, name: "Болларды", img: "/svg/catalog/zigzag_600-1.svg", bg: "" },
+        { id: 7, name: "Художественное литьё",multiline: true, img: "/svg/catalog/vivaldi_ikonka.svg", bg: "" },
+        { id: 8, name: "Световые фасады",multiline: true, img: "/svg/catalog/dom-tip-1-1.svg", bg: "" },
+        { id: 9, name: "Поля света",multiline: true, img: "/svg/catalog/svetilnik-svetodiodnyj-shar.png.svg", bg: "" },
+        { id: 10, name: "Опоры освещения",multiline: true, img: "/svg/catalog/modulnyj-stolb.svg", bg: "" },
+        { id: 11, name: "Модульное оборудование",desk: "Автоматы, УЗО, контакторы и защита", multiline: true, img: "", bg: "" },
+        { id: 12, name: "Аксессуары", img: "/svg/catalog/2-plates-512x512-1.svg", bg: "" },
+    ];
+
+  return (
+    <div className='max-w-[1400px] mx-auto'>
+        <div className=''>
+            <h3 className='text-[42px] leading-[100%] font-[700] uppercase'>Каталог</h3>
+            <div className='flex gap-[20px] mt-[57px]'>
+                <div className='grid grid-cols-3 gap-[20px] max-w-[858px] w-full rounded-[9px]'>
+                    {catalog.map((item)=> (
+                        <div key={item.id} className='relative *:max-w-[273px] h-[201] w-full bg-[#F8F8F8] p-[14px]'>
+                            <p className='text-[16px] font-[600] leading-[120%]'>{item.name}</p>
+                            <img src={item.img} alt=""  className='absolute right-0 bottom-0'/>
+                    </div>))}
+                </div>
+                <div className='max-w-[476px] w-full border border-[#EF3824] py-[39px] px-[36px] rounded-[9px]'>
+                    <h4 className='text-[42px] uppercase leading-[120%] font-[700]'>Модульное <br/>оборудование</h4>
+                    <p className='mt-[41px] text-[18px] leading-[120%] font-[400]'>
+                        Надёжные компоненты <span className='text-[#EF3824]'>для щитовых <br/>
+                        систем и электробезопасности.<br/></span> 
+                        Подходят для промышленных<br/>
+                        и городских объектов<br/>
+                    </p>
+                    <div className='mt-[129px] flex flex-col gap-[10px] mb-[207px]'>
+                        {modules.map((item) => (
+                            <div key={item.id} className='flex gap-[20px]'>
+                                <img src={item.img} alt="" />
+                                <p>{item.name}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default page
