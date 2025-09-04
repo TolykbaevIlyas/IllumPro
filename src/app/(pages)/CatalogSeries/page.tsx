@@ -84,8 +84,7 @@ const page = () => {
                     >
                     <input
                         type="checkbox"
-                        checked={filters.power.includes(v)}
-                        onChange={() => handleFilterChange("power", v)}
+                        
                     />
                     <span>{v} Вт</span>
                     </label>
@@ -104,8 +103,7 @@ const page = () => {
                     >
                     <input
                         type="checkbox"
-                        checked={filters.voltage.includes(v)}
-                        onChange={() => handleFilterChange("voltage", v)}
+                        
                     />
                     <span>{v} B</span>
                     </label>
@@ -126,8 +124,7 @@ const page = () => {
                     >
                     <input
                         type="checkbox"
-                        checked={filters.voltage.includes(v)}
-                        onChange={() => handleFilterChange("voltage", v)}
+                        
                     />
                     <span>{v} B</span>
                     </label>
@@ -147,8 +144,7 @@ const page = () => {
                     >
                     <input
                         type="checkbox"
-                        checked={filters.case.includes(v)}
-                        onChange={() => handleFilterChange("case", v)}
+                        
                     />
                     <span>{v}</span>
                     </label>
@@ -167,8 +163,7 @@ const page = () => {
                     >
                     <input
                         type="checkbox"
-                        checked={filters.voltage.includes(v)}
-                        onChange={() => handleFilterChange("voltage", v)}
+                        
                     />
                     <span>{v} B</span>
                     </label>
