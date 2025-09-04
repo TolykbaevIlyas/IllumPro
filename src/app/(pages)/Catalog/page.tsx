@@ -2,9 +2,11 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+import React, { useState } from 'react'
 
 const page = () => {
+
+     const [open, setOpen] = useState(false);
 
     const modules = [
         {id: 1, name: 'Автоматические выключатели', img: '/svg/catalog/avtomat.svg'},
@@ -53,10 +55,54 @@ const page = () => {
             </div>
             <div className='flex justify-between max-lg:flex-col'>
                 <h3 className='text-[42px] leading-[100%] font-[700] uppercase mt-[40px]'>Каталог</h3>
-                <div className='flex gap-[17px]'>
-                    Скачать каталог (PDF)
-                    <img src="/svg/catalog/donwload.svg" alt=""  className='max-w-[17px] w-full h-[21px]'/>
-                </div>
+                <div className="relative inline-block">
+      {/* Кнопка */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-[8px] text-[#F44336] hover:text-[#d9362c] transition font-medium"
+      >
+        Скачать каталог (PDF)
+        <img
+          src="/svg/catalog/donwload.svg"
+          alt="download"
+          className={`w-[17px] h-[21px] transition-transform ${
+            open ? "rotate-180" : "rotate-0"
+          }`}
+        />
+      </button>
+
+      {/* Выпадающий список */}
+      {open && (
+        <div className="absolute mt-3 w-[230px] bg-white shadow-md rounded-md overflow-hidden border">
+          <a
+            href="/pdf/catalog-2021.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between px-4 py-3 text-gray-800 hover:bg-gray-100 transition"
+          >
+            Каталог 2021 год (PDF)
+            <img
+              src="/svg/catalog/donwload.svg"
+              alt=""
+              className="w-[17px] h-[21px]"
+            />
+          </a>
+          <a
+            href="/pdf/catalog-2022.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between px-4 py-3 text-gray-800 hover:bg-gray-100 transition"
+          >
+            Каталог 2022 год (PDF)
+            <img
+              src="/svg/catalog/donwload.svg"
+              alt=""
+              className="w-[17px] h-[21px]"
+            />
+          </a>
+        </div>
+      )}
+    </div>
             </div>
             <div className='flex gap-[20px] mt-[57px]'>
                 <div className='grid grid-cols-3 gap-[20px] max-w-[858px] w-full rounded-[9px]'>

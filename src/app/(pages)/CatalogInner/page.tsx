@@ -66,7 +66,7 @@ const page = () => {
                     {catalog.map((item)=> (
                         <Link href="/CatalogSeries" key={item.id} className='relative *:max-w-[273px] h-[201] w-full bg-[#F8F8F8] p-[14px]'>
                             <p className='text-[16px] font-[600] leading-[120%]'>{item.name}</p>
-                            <Image width={0} height={0} sizes="300vw" src={item.img} alt=""  className='w-auto h-auto absolute right-0 bottom-0 max-lg:scale-200 max-lg:origin-bottom-right'/>
+                            <Image width={0} height={0} sizes="200vw" src={item.img} alt=""  className='w-auto h-auto absolute right-0 bottom-0 max-lg:scale-200 max-lg:origin-bottom-right'/>
                     </Link>))}
                 </div>
             
