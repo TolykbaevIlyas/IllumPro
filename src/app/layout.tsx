@@ -12,6 +12,7 @@ const montserrat = Montserrat({
   weight: ['400', '500', '600', '700'], // можно выбрать нужные веса
 });
 
+
 export const metadata: Metadata = {
   title: 'Illum Pro',
 };
