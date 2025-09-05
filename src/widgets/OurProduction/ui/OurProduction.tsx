@@ -5,7 +5,7 @@ import ourProd from '@/shared/assets/OurProd.jpg';
 
 const OurProduction = () => {
   return (
-    <div className="max-w-[1456px] w-full mb-[167px] px-[24px] md:px-0 ">
+    <div className="xl:max-w-[1200px] 2xl:max-w-[1456px] w-full mb-[40px] mt-[40px] xl:mb-[167px] px-[24px] md:px-0 ">
       <h2 className="mb-[26px] md:mb-[80px] uppercase text-[#2E2C30] font-bold min-[1920]:text-[42px] max-[1920]:text-[34px] max-[391]:text-[24px] max-w-[221px] md:max-w-full">
         Наше производство
       </h2>

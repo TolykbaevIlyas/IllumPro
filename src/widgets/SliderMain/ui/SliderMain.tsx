@@ -17,10 +17,10 @@ const images = [img1.src, img2.src, img3.src, img4.src, img5.src];
 
 const SliderMain = () => {
   return (
-    <div className="max-w-[1351px] w-full flex justify-end items-end max-[1280px]:px-[24px] relative mt-[91px]">
+    <div className="xl:max-w-[1200px] 2xl:max-w-[1353px] w-full flex justify-end items-end max-[1280px]:px-[24px] relative mt-[91px]">
       {/* Десктоп */}
 
-      <h2 className="absolute max-[391px]:left-[25px] top-[-50px] max-[391px]:block hidden min-[1280px]:block min-[1920px]:left-0 md:top-[50px] max-[1920px]:left-[70px] max-[391]:max-w-[342px] max-[1920]:max-w-[220px] min-[1920px]:max-w-[280px] max-[391px]:text-[24px] min-[1920px]:text-[24px] max-[1920px]:text-[18px]">
+      <h2 className="absolute max-[391px]:left-[25px] top-[-50px] max-[769px]:block hidden min-[1280px]:block min-[1920px]:left-0 md:top-[50px] max-[1920px]:left-0 max-[391]:max-w-[342px] max-[1920]:max-w-[220px] min-[1920px]:max-w-[280px] max-[391px]:text-[24px] min-[1920px]:text-[24px] max-[1920px]:text-[18px]">
         IPRO — современные и надежные решения для проектов любого масштаба
       </h2>
       <div className="hidden md:flex gap-[14px] max-w-[1129px]">

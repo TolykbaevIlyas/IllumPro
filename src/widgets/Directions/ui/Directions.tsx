@@ -38,7 +38,7 @@ const cards = [
 
 const Directions = () => {
   return (
-    <div className="mt-[42px] min-[1280px]:mt-[110px] max-[1280px]:px-[24px]">
+    <div className="xl:max-w-[1200px] 2xl:max-w-[1353px] mt-[42px] min-[1280px]:mt-[110px] max-[1280px]:px-[24px]">
       <h2 className="max-[390px]:text-[24px] max-[1920px]:text-[34px] font-bold mb-[42px] text-[42px]">
         Направления
       </h2>
