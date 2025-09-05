@@ -2,7 +2,7 @@ import React from 'react';
 
 const InfoComp = () => {
   return (
-    <ul className="flex max-[1280px]:flex-col w-full  min-[1280px]items-center gap-[15px] mt-[40] max-[1270px]:px-[24px] max-[768px]:px-[24px] min-[1280px]:mt-[91px] max-[1281px]:max-w-[1140px] max-[1920]:max-w-[1206px] min-[1920px]:max-w-[1351px] max-[1280px]:h-[491px] max-[1920px]:h-[93px] min-[1920]:h-[124px] text-[#2E2C30]">
+    <ul className="flex  xl:max-w-[1200px] 2xl:max-w-[1353px]  max-[1280px]:flex-col w-full  min-[1280px]:items-center gap-[15px] mt-[40] max-[1270px]:px-[24px] max-[768px]:px-[24px] min-[1280px]:mt-[91px] max-[1281px]:max-w-[1140px] max-[1920]:max-w-[1206px] min-[1920px]:max-w-[1351px] max-[1280px]:h-[491px] max-[1920px]:h-[93px] min-[1920]:h-[124px] text-[#2E2C30]">
       <li className="border-l-2 border-[#EF3824] px-[16px] h-full">
         <h2 className="text-[34px] min-[1920px]:text-[42px] font-bold text-nowrap">
           {'>'} 600 проектов
