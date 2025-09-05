@@ -53,21 +53,39 @@ const page = () => {
                 <p>TORNADO</p>
             </div>
             <div className='flex justify-between max-lg:flex-col'>
-                <h3 className='text-[42px] leading-[100%] font-[700] uppercase mt-[40px]'>Архитектурное освещение</h3>
+                <h3 className='text-[42px] leading-[100%] font-[700] uppercase mt-[40px] max-lg:text-[24px]'>Архитектурное освещение</h3>
                 <div className='flex gap-[17px]'>
                     Скачать каталог (PDF)
                     <img src="/svg/catalog/donwload.svg" alt=""  className='max-w-[17px] w-full h-[21px]'/>
                 </div>
             </div>
-            <p className='mt-[47px] max-w-[890px] w-full'>Мы разрабатывает решения для архитектурной подсветки фасадов, ниш, колонн и кровель. Мы поставляем надёжные светильники с разной оптикой, цветовой температурой
+            <p className='mt-[47px] max-w-[890px] w-full max-lg:text-[14px]'>Мы разрабатывает решения для архитектурной подсветки фасадов, ниш, колонн и кровель. Мы поставляем надёжные светильники с разной оптикой, цветовой температурой
 и DALI-управлением. Работаем с современными и историческими объектами.</p>
             <div className='flex gap-[20px] mt-[57px]'>
-                <div className='grid grid-cols-5 max-lg:grid-cols-3 gap-[25px] max-w-[1349px] w-full rounded-[9px]'>
+                <div className='grid grid-cols-5 max-lg:grid-cols-3 gap-[25px] max-w-[1349px] w-full '>
                     {catalog.map((item)=> (
-                        <Link href="/CatalogSeries" key={item.id} className='relative *:max-w-[273px] h-[201] w-full bg-[#F8F8F8] p-[14px]'>
-                            <p className='text-[16px] font-[600] leading-[120%]'>{item.name}</p>
-                            <Image width={0} height={0} sizes="200vw" src={item.img} alt=""  className='w-auto h-auto absolute right-0 bottom-0 max-lg:scale-200 max-lg:origin-bottom-right'/>
-                    </Link>))}
+                        item.id === 11 ? (
+                            <Link href={'/CatalogSeries'} key={item.id} className='flex flex-col gap-[33px] text-white relative *:max-w-[273px] h-[201] w-full bg-[#EF3824] p-[14px] max-lg:p-[5px] rounded-[9px] max-sm:max-w-[108px] max-sm:h-[108px]'>
+                                <p className='flex flex-col text-[16px] font-[600] leading-[120%] max-sm:text-[12px]'>
+                                    {item.name.split(" ").map((word, i) => (
+                                        <span key={i}>
+                                            {word}
+                                        </span>
+                                    ))}</p>
+                                <p className='text-[16px] font-[400] opacity-60 max-lg:hidden'>Автоматы, УЗО, контакторы <br/>и защита</p>
+                                <span className='flex items-center justify-between max-lg:hidden'>Подобрать решение <img src="/svg/catalog/arrow.svg" className='' alt="" /></span>
+                            </Link>) : (
+                            <Link href={'/CatalogSeries'} key={item.id} className='relative *:max-w-[273px] h-[201] w-full bg-[#F8F8F8] p-[14px] max-lg:p-[5px] rounded-[9px] max-sm:max-w-[108px] max-sm:h-[108px]'>
+                                <p className='flex flex-col text-[16px] font-[600] leading-[120%] max-sm:text-[12px]'>
+                                    {item.name.split(" ").map((word, i) => (
+                                        <span key={i}>
+                                            {word}
+                                        </span>
+                                    ))}</p>
+                                <Image width={0} height={0} sizes="200vw" src={item.img} alt=""  className='w-auto h-auto absolute right-0 bottom-0 max-lg:scale-200 max-lg:origin-bottom-right'/>
+                            </Link>
+                        )
+                ))}
                 </div>
             
             </div>
@@ -77,10 +95,10 @@ const page = () => {
             <div className='mt-[57px] mb-[137px] grid grid-cols-3  max-lg:grid-cols-2 gap-[23px]'>
                 {Quality.map((item)=> (
                     <div key={item.id} className='flex gap-[27px] py-[27px] pl-[16px] pr-[13px] bg-[#F8F8F8] max-w-[437px] w-full rounded-[9px]'>
-                        <img src={item.icon} alt=""  className='max-w-[25px] w-full h-[25px]'/>
+                        <img src={item.icon} alt=""  className='max-w-[25px] w-full h-[25px] max-lg:hidden'/>
                         <div className='flex flex-col gap-[27px]'>
-                            <h5 className='uppercase font-[700] text-[16px] leading-[120%] flex max-lg:break-words max-lg:text-[12px] break-words line-clamp-3'>{item.name}</h5>
-                            <p className='text-[14px] leading-[120%] font-[400] max-lg:text-[10px]'>{item.desc}</p>
+                            <h5 className='uppercase font-[700] text-[16px] leading-[120%] flex max-lg:break-words max-lg:text-[12px] break-words line-clamp-3 max-sm:text-[12px]'>{item.name}</h5>
+                            <p className='text-[14px] leading-[120%] font-[400] max-lg:text-[10px] max-sm:text-[10px]'>{item.desc}</p>
                         </div>
                     </div>
                 ))}

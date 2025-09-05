@@ -162,7 +162,7 @@ export default function ProductPage() {
 
             <p className="mt-[101px]">ТОРNADO 800 Вт — один из самых мощных архитектурных светильников на рынке. Используется в проектах премиального уровня, где важны:</p>
           {/* bullets */}
-          <div className="flex gap-[40px]">
+          <div className="flex gap-[40px] max-lg:hidden">
             <ul className="mt-5 space-y-1.5 text-[13px] text-[#4B5563]">
             <li>— максимальный световой поток</li>
             <li>— точная оптика (10°)</li>
