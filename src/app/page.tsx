@@ -1,4 +1,5 @@
 import Directions from '@/widgets/Directions';
+import FormWeCan from '@/widgets/FormWeCan';
 import HeroMain from '@/widgets/HeroMain';
 import HeroMainMobile from '@/widgets/HeroMain/ui/HeroMainMobile';
 import InfoComp from '@/widgets/InfoComp';
@@ -19,6 +20,7 @@ export default function Home() {
       <InfoComp />
       <SliderMain />
       <Directions />
+      <FormWeCan />
       <OurProduction />
       <div className="bg-[url('@/shared/assets/news.png')] bg-cover bg-center  max-w-dvw w-full max-h-dvh max-[1280px]:h-[525px] max-[1920px]:h-[576px] min-[1920px]:h-[671px]">
         <News />

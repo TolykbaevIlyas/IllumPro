@@ -60,7 +60,7 @@ const News = () => {
   }, []);
 
   return (
-    <div className="max-w-[1352px] w-full py-[53px] mx-auto px-[24px] flex flex-col gap-[50px]">
+    <div className="max-w-[1352px] w-full py-[33px] mx-auto px-[24px] flex flex-col gap-[50px]">
       <h2 className="text-[#fff] font-bold text-[34px] md:text-[42px]">Новости</h2>
 
       <div className="h-full">

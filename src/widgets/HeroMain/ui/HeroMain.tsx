@@ -8,7 +8,7 @@ import Play from '@/shared/assets/icons/Play';
 
 const HeroMain = () => {
   return (
-    <section className="">
+    <section className="xl:max-w-[1200px] 2xl:max-w-[1353px] mx-auto">
       <div className="flex justify-between ">
         <h2 className="text-[#FFFFFF]  min-[1280px]:text-[34px] min-[1920px]:text-[43px] min-[1280px]:max-h-[195px] min-[1920px]:max-h-[250px] font-bold min-[1280px]:max-w-[596px] min-[1920px]:max-w-[697px]">
           IPRO — российские световые решения полного цикла для общественных пространств, зданий и
