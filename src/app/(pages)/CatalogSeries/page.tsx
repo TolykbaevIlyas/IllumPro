@@ -10,6 +10,7 @@ const page = () => {
     voltage: [],
     case: [],
   });
+  const [isOpen, setOpen] = useState(false);
 
   const products = [
   {
@@ -40,7 +41,7 @@ const page = () => {
 
 
   return (
-    <div className='max-w-[1400px] w-full mx-auto'>
+    <div className='max-w-[1400px] w-full mx-auto mb-[552px] max-2xl:mb-[51px] max-xl:mb-[92px]'>
         <div className=''>
             <div className='flex gap-[9px] items-center text-[#A9A9A9] mt-[51px]'>
                 <p>Главная</p>
@@ -68,114 +69,109 @@ const page = () => {
         </div>
         <div className='flex gap-[20px] max-lg:flex-col'>
             <div className='max-w-[451px] w-full'>
-                <div className='bg-[#F8F8F8] max-w-[451px] w-full rounded-t-[8px]'>
-                    <div className='bg-[#EF3824] h-[46px] text-[18px] font-[600] text-white flex justify-between p-[14px] rounded-t-[8px]'>
-                        <p>Фильтр</p>
-                        <p>Сбросить X</p>
+                <div onClick={()=>setOpen(open => !open)} className='rounded-[7px] mt-[31px] max-w-[202px] text-center items-center justify-center flex w-full h-[48px] bg-[#EF3824] text-white
+                  max-sm:max-w-full max-sm:mt-[20px]'>
+                    Фильтры
+                </div>
+                {isOpen ? <div className='bg-[#F8F8F8] max-w-[451px] w-full rounded-t-[8px]'>
+                    <div className='bg-[#EF3824] h-[46px] text-[18px] font-[600] text-white flex justify-between p-[14px] rounded-t-[8px]
+                                    max-sm:text-[16px] max-sm:h-[40px] max-sm:p-[10px] max-lg:hidden'>
+                                <p>Фильтр</p>
+                                <p>Сбросить X</p>
                     </div>
+
                     {/* Power */}
-                <div className='mt-[20px] px-[12px] text-[18px] font-[700]'>
-                <p className="font-medium text-sm mb-1">Мощность</p>
-                <div className='grid grid-cols-3'>
-                    {[800,800,1400, 1400,800,800].map((v) => (
-                    <label
-                    key={v}
-                    className="flex items-center space-x-2 text-sm mb-1"
-                    >
-                    <input
-                        type="checkbox"
-                        
-                    />
-                    <span>{v} Вт</span>
-                    </label>
-                ))}
-                </div>
-                </div>
-                <div className='border border-[#DFDFDF] max-w-[423px] w-full mt-[31px] mx-[13px]'></div>
-                {/* Voltage */}
-                <div className='text-[18px] font-[700] mt-[20px] px-[12px]'>
-                <p className="font-medium text-sm mb-1 mt-3">Напряжение</p>
-                <div className='grid grid-cols-3'>
-                    {[800,800,1400, 1400,800,800].map((v) => (
-                    <label
-                    key={v}
-                    className="flex items-center space-x-2 text-sm mb-1"
-                    >
-                    <input
-                        type="checkbox"
-                        
-                    />
-                    <span>{v} B</span>
-                    </label>
-                ))}
-                </div>
-                
-                </div>
+                    <div className='mt-[20px] px-[12px] text-[18px] font-[700] max-sm:text-[16px]'>
+                    <p className="font-medium text-sm mb-1">Мощность</p>
+                    <div className='grid grid-cols-3 max-sm:grid-cols-2 gap-x-2'>
+                        {[800, 800, 1400, 1400, 800, 800].map((v, i) => (
+                        <label
+                            key={i}
+                            className="flex items-center space-x-2 text-sm mb-1"
+                        >
+                            <input type="checkbox" />
+                            <span>{v} Вт</span>
+                        </label>
+                        ))}
+                    </div>
+                    </div>
 
-                <div className='border border-[#DFDFDF] max-w-[423px] w-full mt-[31px] mx-[13px]'></div>
+                    <div className='border border-[#DFDFDF] max-w-[423px] w-full mt-[31px] mx-[13px]'></div>
 
-                <div className='text-[18px] font-[700] mt-[20px] px-[12px]'>
-                <p className="font-medium text-sm mb-1 mt-3">Размеры</p>
-                <div className='grid grid-cols-3'>
-                    {[800,800,1400, 1400,800,800].map((v) => (
-                    <label
-                    key={v}
-                    className="flex items-center space-x-2 text-sm mb-1"
-                    >
-                    <input
-                        type="checkbox"
-                        
-                    />
-                    <span>{v} B</span>
-                    </label>
-                ))}
-                </div>
-                
-                </div>
+                    {/* Voltage */}
+                    <div className='text-[18px] font-[700] mt-[20px] px-[12px] max-sm:text-[16px]'>
+                    <p className="font-medium text-sm mb-1 mt-3">Напряжение</p>
+                    <div className='grid grid-cols-3 max-sm:grid-cols-2 gap-x-2'>
+                        {[800, 800, 1400, 1400, 800, 800].map((v, i) => (
+                        <label
+                            key={i}
+                            className="flex items-center space-x-2 text-sm mb-1"
+                        >
+                            <input type="checkbox" />
+                            <span>{v} B</span>
+                        </label>
+                        ))}
+                    </div>
+                    </div>
 
-                <div className='border border-[#DFDFDF] max-w-[423px] w-full mt-[31px] mx-[13px]'></div>
-                {/* Case */}
-                <div className='text-[18px] font-[700] mt-[20px] px-[12px]'>
-                <p className="font-medium text-sm mb-1 mt-3">Корпус</p>
-                {["Литой алюминий", "Алюминий", "Сталь"].map((v) => (
-                    <label
-                    key={v}
-                    className="flex items-center space-x-2 text-sm mb-1"
-                    >
-                    <input
-                        type="checkbox"
-                        
-                    />
-                    <span>{v}</span>
-                    </label>
-                ))}
-                </div>
+                    <div className='border border-[#DFDFDF] max-w-[423px] w-full mt-[31px] mx-[13px]'></div>
 
-                <div className='border border-[#DFDFDF] max-w-[423px] w-full mt-[31px] mx-[13px]'></div>
+                    {/* Size */}
+                    <div className='text-[18px] font-[700] mt-[20px] px-[12px] max-sm:text-[16px]'>
+                    <p className="font-medium text-sm mb-1 mt-3">Размеры</p>
+                    <div className='grid grid-cols-3 max-sm:grid-cols-2 gap-x-2'>
+                        {[800, 800, 1400, 1400, 800, 800].map((v, i) => (
+                        <label
+                            key={i}
+                            className="flex items-center space-x-2 text-sm mb-1"
+                        >
+                            <input type="checkbox" />
+                            <span>{v} B</span>
+                        </label>
+                        ))}
+                    </div>
+                    </div>
 
-                <div className='text-[18px] font-[700] mt-[20px] px-[12px] pb-[36px]'>
-                <p className="font-medium text-sm mb-1 mt-3">Световой поток</p>
-                <div className='grid grid-cols-3'>
-                    {[800,800,1400, 1400,800,800].map((v) => (
-                    <label
-                    key={v}
-                    className="flex items-center space-x-2 text-sm mb-1"
-                    >
-                    <input
-                        type="checkbox"
-                        
-                    />
-                    <span>{v} B</span>
-                    </label>
-                ))}
-                </div>
-                
-                </div>
-                
+                    <div className='border border-[#DFDFDF] max-w-[423px] w-full mt-[31px] mx-[13px]'></div>
 
+                    {/* Case */}
+                    <div className='text-[18px] font-[700] mt-[20px] px-[12px] max-sm:text-[16px]'>
+                    <p className="font-medium text-sm mb-1 mt-3">Корпус</p>
+                    {["Литой алюминий", "Алюминий", "Сталь"].map((v, i) => (
+                        <label
+                        key={i}
+                        className="flex items-center space-x-2 text-sm mb-1"
+                        >
+                        <input type="checkbox" />
+                        <span>{v}</span>
+                        </label>
+                    ))}
+                    </div>
+
+                    <div className='border border-[#DFDFDF] max-w-[423px] w-full mt-[31px] mx-[13px]'></div>
+
+                    {/* Light */}
+                    <div className='text-[18px] font-[700] mt-[20px] px-[12px] pb-[36px] max-sm:text-[16px]'>
+                    <p className="font-medium text-sm mb-1 mt-3">Световой поток</p>
+                    <div className='grid grid-cols-3 max-sm:grid-cols-2 gap-x-2'>
+                        {[800, 800, 1400, 1400, 800, 800].map((v, i) => (
+                        <label
+                            key={i}
+                            className="flex items-center space-x-2 text-sm mb-1"
+                        >
+                            <input type="checkbox" />
+                            <span>{v} B</span>
+                        </label>
+                        ))}
+                    </div>
+                    </div>
                 </div>
-                <div className='rounded-[7px] mt-[31px] max-w-[202px] text-center items-center justify-center flex w-full h-[48px] bg-[#EF3824] text-white'>Сбросить фильтры</div>
-            </div>
+: ''}
+  <div className='rounded-[7px] mt-[31px] max-w-[202px] text-center items-center justify-center flex w-full h-[48px] bg-[#EF3824] text-white
+                  max-sm:max-w-full max-sm:mt-[20px] max-lg:hidden'>
+    Сбросить фильтры
+  </div>
+</div>
              
             <div className="max-w-[883px] w-full bg-white rounded-lg overflow-hidden shadow-sm">
             {/* Заголовки */}

@@ -54,7 +54,7 @@ const page = () => {
                 <p>TORNADO</p>
             </div>
             <div className='flex justify-between max-lg:flex-col'>
-                <h3 className='text-[42px] leading-[100%] font-[700] uppercase mt-[40px]'>Каталог</h3>
+                <h3 className='text-[42px] leading-[100%] font-[700] uppercase mt-[40px] max-lg:text-[24px]'>Каталог</h3>
                 <div className="relative inline-block">
       {/* Кнопка */}
       <button
@@ -104,13 +104,30 @@ const page = () => {
       )}
     </div>
             </div>
-            <div className='flex gap-[20px] mt-[57px]'>
+            <div className='flex gap-[20px] mt-[57px] max-lg:mt-[25px]'>
                 <div className='grid grid-cols-3 gap-[20px] max-w-[858px] w-full rounded-[9px]'>
                     {catalog.map((item)=> (
-                    <Link href={'/CatalogInner'} key={item.id} className='relative *:max-w-[273px] h-[201] w-full bg-[#F8F8F8] p-[14px]'>
-                        <p className='text-[16px] font-[600] leading-[120%]'>{item.name}</p>
-                        <Image width={0} height={0} sizes="100vw" src={item.img} alt=""  className='w-auto h-auto absolute right-0 bottom-0 max-lg:scale-50 max-lg:origin-bottom-right'/>
-                    </Link>
+                        item.id === 11 ? (
+                            <Link href={'/CatalogInner'} key={item.id} className='flex flex-col gap-[33px] text-white relative *:max-w-[273px] h-[201] w-full bg-[#EF3824] p-[14px] max-lg:p-[5px] rounded-[9px] max-sm:max-w-[108px] max-sm:h-[108px]'>
+                                <p className='flex flex-col text-[16px] font-[600] leading-[120%] max-sm:text-[12px]'>
+                                    {item.name.split(" ").map((word, i) => (
+                                        <span key={i}>
+                                            {word}
+                                        </span>
+                                    ))}</p>
+                                <p className='text-[16px] font-[400] opacity-60 max-lg:hidden'>Автоматы, УЗО, контакторы <br/>и защита</p>
+                                <span className='flex items-center justify-between max-lg:hidden'>Подобрать решение <img src="/svg/catalog/arrow.svg" className='' alt="" /></span>
+                            </Link>) : (
+                            <Link href={'/CatalogInner'} key={item.id} className='relative *:max-w-[273px] h-[201] w-full bg-[#F8F8F8] p-[14px] max-lg:p-[5px] rounded-[9px] max-sm:max-w-[108px] max-sm:h-[108px]'>
+                                <p className='flex flex-col text-[16px] font-[600] leading-[120%] max-sm:text-[12px]'>
+                                    {item.name.split(" ").map((word, i) => (
+                                        <span key={i}>
+                                            {word}
+                                        </span>
+                                    ))}</p>
+                                <Image width={0} height={0} sizes="100vw" src={item.img} alt=""  className='w-auto h-auto absolute right-0 bottom-0 max-lg:scale-50 max-lg:origin-bottom-right'/>
+                            </Link>
+                        )
                 ))}
                 </div>
                 <div className=' max-lg:hidden max-w-[476px] w-full border border-[#EF3824] py-[39px] px-[36px] rounded-[9px]'>
@@ -137,10 +154,10 @@ const page = () => {
             <div className='mt-[57px] mb-[137px] grid grid-cols-3  max-lg:grid-cols-2 gap-[23px]'>
                 {Quality.map((item)=> (
                     <div key={item.id} className='flex gap-[27px] py-[27px] pl-[16px] pr-[13px] bg-[#F8F8F8] max-w-[437px] w-full rounded-[9px]'>
-                        <img src={item.icon} alt=""  className='max-w-[25px] w-full h-[25px]'/>
+                        <img src={item.icon} alt=""  className='max-w-[25px] w-full h-[25px] max-lg:hidden'/>
                         <div className='flex flex-col gap-[27px]'>
-                            <h5 className='uppercase font-[700] text-[16px] leading-[120%] flex max-lg:break-words max-lg:text-[12px] break-words line-clamp-3'>{item.name}</h5>
-                            <p className='text-[14px] leading-[120%] font-[400] max-lg:text-[10px]'>{item.desc}</p>
+                            <h5 className='uppercase font-[700] text-[16px] leading-[120%] flex max-lg:break-words max-lg:text-[12px] break-words line-clamp-3 max-sm:text-[12px]'>{item.name}</h5>
+                            <p className='text-[14px] leading-[120%] font-[400] max-lg:text-[10px] max-sm:text-[10px]'>{item.desc}</p>
                         </div>
                     </div>
                 ))}
